@@ -1,0 +1,24 @@
+.subPageStyle {
+    padding-right: 30px;
+    padding-left: 20px;
+    max-width: 900px;
+    justify-content: center;
+
+}
+
+.subPageStyle table {
+    width: 100%;
+    border-bottom: 1px solid #5eb9e6;
+    border-collapse: separate;
+}
+
+.subPageStyle td {
+    padding: 8px 8px 4px 4px;
+    vertical-align: top;
+    background: #fafafc;
+}
+
+.subPageOverStyle {
+    padding-left: 50px;
+    display: flex;
+}

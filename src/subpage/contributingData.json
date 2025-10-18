@@ -1,0 +1,16 @@
+{
+  "list": [
+    {
+      "link": "submitting-patches",
+      "text": "Submitting patches"
+    },
+    {
+      "link": "bugs",
+      "text": "Reporting bugs"
+    },
+    {
+      "link": "wikirules",
+      "text": "Contributing to wiki"
+    }
+  ]
+}

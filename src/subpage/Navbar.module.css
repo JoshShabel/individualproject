@@ -1,0 +1,39 @@
+
+.navBarStyle {
+    background-color: #002b49;
+    font-size: 2em;
+    overflow: hidden;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+
+.navBarStyle ul {
+    float: right;
+    padding-right: 30px;
+}
+
+.navBarStyle img {
+    padding-top: 20px;
+    padding-left: 50px;
+}
+
+.navBarStyle li {
+    display: inline;
+    padding: 10px;
+    color: white;
+}
+
+.navBarStyle li a:hover {
+    color: cornflowerblue;
+    transition: color 150ms ease-in;
+}
+
+.navBarStyle a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navBarStyle a:visited {
+    color: inherit;
+}

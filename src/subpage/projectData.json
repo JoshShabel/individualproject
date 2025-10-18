@@ -1,0 +1,40 @@
+{
+  "list": [
+    {
+      "link": "about",
+      "text": "About OpenWrt"
+    },
+    {
+      "link": "rules",
+      "text": "Rules"
+    },
+    {
+      "link": "infrastructure",
+      "text": "Infrastructure"
+    },
+    {
+      "link": "donate",
+      "text": "Donate"
+    },
+    {
+      "link": "merchandise",
+      "text": "Merchandise"
+    },
+    {
+      "link": "wikistart",
+      "text": "Website"
+    },
+    {
+      "link": "trademark",
+      "text": "Trademark policy"
+    },
+    {
+      "link": "license",
+      "text": "License"
+    },
+    {
+      "link": "contact",
+      "text": "Contacts"
+    }
+  ]
+}

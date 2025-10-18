@@ -1,0 +1,26 @@
+.sidebarStyle {
+    border: 1px #f0f0f0 solid;
+    border-radius: 5px;
+    width: 300px;
+    background: #fcfcfc;
+}
+
+.sidebarStyle ul {
+    width: 300px;
+    list-style: none;
+}
+
+.sidebarStyle li:hover {
+    width: 80%;
+    background: #f3f3f3;
+    transition: background 150ms ease-in;
+}
+
+.sidebarStyle a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebarStyle a:visited {
+    color: inherit;
+}

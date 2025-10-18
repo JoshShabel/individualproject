@@ -1,0 +1,24 @@
+{
+  "list": [
+    {
+      "link": "supported-devices",
+      "text": "Supported devices"
+    },
+    {
+      "link": "packages",
+      "text": "Packages"
+    },
+    {
+      "link": "downloads",
+      "text": "Downloads"
+    },
+    {
+      "link": "security",
+      "text": "Security"
+    },
+    {
+      "link": "faq",
+      "text": "FAQ"
+    }
+  ]
+}
