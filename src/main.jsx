@@ -6,7 +6,6 @@ import SubPage from "./subpage/SubPage.jsx";
 import NotFound from "./NotFound.jsx";
 import { LowWidthProvider } from "./LowWidthContext.jsx";
 
-
 createRoot(document.getElementById('root')).render(
 
     <LowWidthProvider>
