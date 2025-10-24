@@ -1,10 +1,13 @@
 import styles from './Navbar.module.css';
 import openwrtLogo from '../assets/OpenWrt_Logo.svg'
+import LowWidthContext from "../LowWidthContext.jsx";
+import {useContext} from "react";
 
-const Navbar = () => {
+
+function Navbar() {
+    const { lowWidth} = useContext(LowWidthContext);
     return (
-
-        <div className={styles.navBarStyle}>
+        <div className={lowWidth ? styles.navBarStyleLowWidth : styles.navBarStyleHighWidth}>
             <a href="/#/"><img style={{height: '70px'}} src={openwrtLogo} alt="OpenWRT logo"/></a>
             <ul>
                 <li><a href="/#/learn">Learn about OpenWrt</a></li>
@@ -13,6 +16,6 @@ const Navbar = () => {
             </ul>
         </div>
     );
-};
+}
 
 export default Navbar;

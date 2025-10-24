@@ -20,5 +20,9 @@
 
 .subPageOverStyle {
     padding-left: 50px;
+}
+
+.subPageOverStyleHighWidth {
+    composes: subPageOverStyle;
     display: flex;
 }

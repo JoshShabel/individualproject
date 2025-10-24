@@ -1,17 +1,37 @@
+.extraMargin {
+    margin-left: 20px;
+}
+
 .sidebarStyle {
     border: 1px #f0f0f0 solid;
     border-radius: 5px;
-    width: 300px;
     background: #fcfcfc;
 }
 
 .sidebarStyle ul {
-    width: 300px;
     list-style: none;
 }
 
+.sidebarStyleHighWidth{
+    composes: sidebarStyle;
+    width: 300px;
+}
+
+.sidebarStyleLowWidth{
+    composes: sidebarStyle;
+    width: 94%;
+}
+
+.sidebarStyleLowWidth ul {
+    width: 100%;
+}
+
+.sidebarStyleLowWidth li {
+    width: 100%;
+}
+
 .sidebarStyle li:hover {
-    width: 80%;
+    width: 85%;
     background: #f3f3f3;
     transition: background 150ms ease-in;
 }
@@ -23,4 +43,8 @@
 
 .sidebarStyle a:visited {
     color: inherit;
+}
+
+button {
+    margin-top: 20px;
 }

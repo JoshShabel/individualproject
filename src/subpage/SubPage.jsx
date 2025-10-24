@@ -21,10 +21,13 @@ import Merchandise from "../project/Merchandise.jsx";
 import Rules from "../project/Rules.jsx";
 import Trademark from "../project/Trademark.jsx";
 import Website from "../project/Website.jsx";
+import LowWidthContext from "../LowWidthContext.jsx";
+import {useContext} from "react";
 
 
 function SubPage() {
     const {page, innerPage} = useParams();
+    const { lowWidth } = useContext(LowWidthContext);
 
     function chooseSubpage() {
         switch (page) {
@@ -87,7 +90,7 @@ function SubPage() {
     return (
         <div>
             <Navbar></Navbar>
-            <div className={styles.subPageOverStyle}>
+            <div className={lowWidth ? styles.subPageOverStyle : styles.subPageOverStyleHighWidth}>
                 <Sidebar></Sidebar>
                 <div className={styles.subPageStyle}>
                     {chooseSubpage()}

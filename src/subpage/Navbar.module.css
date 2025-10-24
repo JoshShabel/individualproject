@@ -19,7 +19,6 @@
 }
 
 .navBarStyle li {
-    display: inline;
     padding: 10px;
     color: white;
 }
@@ -36,4 +35,30 @@
 
 .navBarStyle a:visited {
     color: inherit;
+}
+
+.navBarStyleHighWidth {
+    composes: navBarStyle;
+}
+
+.navBarStyleHighWidth li {
+    display: inline;
+}
+
+.navBarStyleLowWidth {
+    composes: navBarStyle;
+    font-size: 1.5em;
+}
+
+.navBarStyleLowWidth ul {
+    display: flex;
+}
+
+.navBarStyleLowWidth li {
+    padding: 10px;
+    color: white;
+}
+
+.navBarStyleLowWidth ul {
+    list-style: none;
 }

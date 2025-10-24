@@ -5,14 +5,14 @@ import PropTypes from "prop-types";
 import learnData from './learnData.json';
 import contributingData from './contributingData.json';
 import projectData from './projectData.json';
+import LowWidthContext from "../LowWidthContext.jsx";
+import {useContext, useState} from "react";
 
-
-function Sidebar() {
-
+const SidebarList = ({lowWidth}) => {
     return (
         <div>
             <h4>Learn about OpenWrt</h4>
-            <div className={styles.sidebarStyle}>
+            <div className={lowWidth ? styles.sidebarStyleLowWidth : styles.sidebarStyleHighWidth}>
                 <ul>
                     {learnData.list.map(item => (
                         <li key={item}><a key={item} href={'#/' + "learn" + '/' + item.link}>{item.text}</a>
@@ -20,7 +20,7 @@ function Sidebar() {
                 </ul>
             </div>
             <h4>Contributing</h4>
-            <div className={styles.sidebarStyle}>
+            <div className={lowWidth ? styles.sidebarStyleLowWidth : styles.sidebarStyleHighWidth}>
                 <ul>
                     {contributingData.list.map(item => (
                         <li key={item}><a key={item} href={'#/' + "contributing" + '/' + item.link}>{item.text}</a>
@@ -28,7 +28,7 @@ function Sidebar() {
                 </ul>
             </div>
             <h4>Project</h4>
-            <div className={styles.sidebarStyle}>
+            <div className={lowWidth ? styles.sidebarStyleLowWidth : styles.sidebarStyleHighWidth}>
                 <ul>
                     {projectData.list.map(item => (
                         <li key={item}><a key={item} href={'#/' + "project" + '/' + item.link}>{item.text}</a>
@@ -37,6 +37,34 @@ function Sidebar() {
             </div>
         </div>
     );
+};
+
+function Sidebar() {
+    const {lowWidth} = useContext(LowWidthContext);
+    const [buttonOne, setButtonOne] = useState(false);
+
+
+    if (lowWidth) {
+        return (
+            <div className={styles.extraMargin}>
+                <button
+                    onClick={() => setButtonOne(!buttonOne)}>
+                    Learn about OpenWrt
+                </button>
+                {buttonOne && (
+                <SidebarList lowWidth={lowWidth}/>
+                )}
+            </div>
+        );
+    } else {
+        return (
+            <SidebarList lowWidth={lowWidth}/>
+        );
+    }
+}
+
+SidebarList.propTypes = {
+    lowWidth: PropTypes.any,
 }
 
 Sidebar.propTypes = {
